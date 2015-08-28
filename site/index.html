@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<title>Backbone.js Library</title>
+<link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+
+	
+	<div id="books">
+		<form id="addBook" action="#">
+			<div>
+				<div>
+					<label for="coverImage">CoverImage: </label>
+					<input id="coverImage" type="file" />
+				</div>
+				<div>
+					<label for="title">Title: </label><input id="title" type="text" />
+				</div>
+				<div>
+				<label for="author">Author: </label><input id="author" type="text" />
+				</div>
+				<div>
+					<label for="releaseDate">Release date: </label>
+					<input id="releaseDate" type="text" />
+				</div>
+				<div>
+					<label for="keywords">Keywords: </label>
+					<input id="keywords" type="text" />
+				</div>
+				<div>
+					
+				<button id="add">Add</button>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+	<script id="bookTemplate" type="text/template">
+		<img src="<%= coverImage %>"/>
+		<ul>
+			<li><%= title %></li>
+			<li><%= author %></li>
+			<li><%= releaseDate %></li>
+			<li><%= keywords %></li>
+		</ul>
+		<button class="delete">Delete</button>
+	</script>
+
+
+
+	<script src="js/lib/jquery-1.11.3.min.js"></script>
+	<script src="js/lib/underscore-min.js"></script>
+	<script src="js/lib/backbone-min.js"></script>
+	<script src="js/models/book.js"></script>
+	<script src="js/collections/library.js"></script>
+	<script src="js/views/book.js"></script>
+	<script src="js/views/library.js"></script>
+	<script src="js/app.js"></script>
+</body>
