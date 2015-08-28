@@ -19,28 +19,7 @@ app.BookView = Backbone.View.extend({
 
 	deleteBook: function(){
 		// delete model
-		var that = this;
 		this.model.destroy();
-		// jQuery.ajax({
-		// 	url: '/api/books/'+that.model.get('_id'),
-		// 	type: 'DELETE',
-		// 	success: function( data, textStatus, jqXHR ) {
-		// 	console.log( 'Post response:' );
-		// 	console.dir( data );
-		// 	console.log( textStatus );
-		// 	console.dir( jqXHR );
-		// 	}
-		// });
-		// this.model.destroy({
-		// 	wait:true,
-		// 	success: function(){
-		// 		console.log('supuestamente removed');
-		// 	},
-		// 	error: function(){
-		// 		console.log('error madafaka');
-		// 	}
-		// });
-
 		// Delete view
 		this.remove();
 	}
